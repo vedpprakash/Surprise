@@ -81,6 +81,14 @@ transition:0.3s;
 #giftBox:hover{
 transform:scale(1.1);
 }
+.button-container{
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  position:relative;
+}
+
 
 #giftMessage{
 margin-top:20px;
