@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Memories</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<audio id="bgMusic" loop>
+  <source src="romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.onload = function () {
+  const music = document.getElementById("bgMusic");
+  music.volume = 0.4;
+
+  const playPromise = music.play();
+
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      document.body.addEventListener("click", function () {
+        music.play();
+      }, { once: true });
+    });
+  }
+};
+</script>
+
+
+<h1>Our Beautiful Moments ❤️</h1>
+
+<div class="gallery">
+
+<img src="photos/photo1.jpeg">
+<img src="photos/photo2.jpeg">
+<img src="photos/photo3.jpeg">
+
+</div>
+
+<br>
+
+<button onclick="next()">Next Surprise</button>
+
+<script>
+
+function next(){
+window.location.href="letter.html";
+}
+
+</script>
+
+</body>
+</html>

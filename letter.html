@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Love Letter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="bgMusic" loop>
+  <source src="romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.onload = function () {
+  const music = document.getElementById("bgMusic");
+  music.volume = 0.4;
+
+  const playPromise = music.play();
+
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      document.body.addEventListener("click", function () {
+        music.play();
+      }, { once: true });
+    });
+  }
+};
+</script>
+
+
+<h1>A Letter For You ❤️</h1>
+
+<div class="message">
+
+<p>
+The day you came into my life, everything became more beautiful.
+Your smile makes my worst days better.
+Your presence makes my world brighter.
+</p>
+
+<p>
+I don't know what the future holds,
+but I know one thing for sure —
+I want you beside me in every moment of it.
+</p>
+
+<p>
+Thank you for being the most special person in my life.
+</p>
+
+</div>
+
+<br>
+
+<button onclick="final()">Gift Surprise</button>
+
+<script>
+
+function final(){
+window.location.href="gift.html";
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+body{
+margin:0;
+padding:0;
+font-family:Arial;
+background:linear-gradient(to bottom,#78bed3,#fad0c4);
+text-align:center;
+height:100vh;
+overflow:hidden;
+}
+
+.container{
+margin-top:120px;
+}
+
+h1{
+font-size:45px;
+color:rgb(224, 114, 114);
+}
+
+h2{
+color:rgb(244, 112, 112);
+margin-bottom:50px;
+}
+
+button{
+padding:15px 35px;
+font-size:20px;
+border:none;
+border-radius:25px;
+background:white;
+color:#ff4b5c;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff4b5c;
+color:white;
+}
+
+.heart{
+position:fixed;
+top:-10px;
+color:red;
+animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(0)}
+100%{transform:translateY(100vh)}
+}
+
+.gallery img{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius:50%;
+margin:15px;
+border:4px solid white;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.message{
+width:70%;
+margin:auto;
+font-size:22px;
+color:white;
+line-height:1.6;
+}
+
+.gift-container{
+margin-top:60px;
+}
+
+#giftBox{
+width:200px;
+cursor:pointer;
+transition:0.3s;
+}
+
+#giftBox:hover{
+transform:scale(1.1);
+}
+
+#giftMessage{
+margin-top:20px;
+color:white;
+font-size:24px;
+}

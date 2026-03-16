@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gift Surprise ❤️</title>
+<link rel="stylesheet" href="style.css">
+<style>
+#yesBtn{
+position:absolute;
+}
+</style>
+</head>
+
+<body>
+    <audio id="bgMusic" loop>
+  <source src="romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.onload = function () {
+  const music = document.getElementById("bgMusic");
+  music.volume = 0.4;
+
+  const playPromise = music.play();
+
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      document.body.addEventListener("click", function () {
+        music.play();
+      }, { once: true });
+    });
+  }
+};
+</script>
+
+
+<h1>Do You Want I-Phone 17 pro? ❤️</h1>
+
+
+<button id="yesBtn" onmouseover="moveButton()">YES 😜</button>
+<button onclick="final()">Final Click</button>
+
+
+<script>
+
+
+
+function moveButton(){
+
+let button = document.getElementById("yesBtn");
+
+let x = Math.random() * (window.innerWidth - 100);
+let y = Math.random() * (window.innerHeight - 50);
+
+button.style.left = x + "px";
+button.style.top = y + "px";
+
+}
+function final(){
+window.location.href="final.html";
+}
+
+</script>
+
+</body>
+</html>
